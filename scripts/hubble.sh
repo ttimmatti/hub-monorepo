@@ -9,7 +9,7 @@ CURRENT_VERSION="5"
 
 REPO="ttimmatti/hub-monorepo"
 RAWFILE_BASE="https://raw.githubusercontent.com/$REPO"
-LATEST_TAG="@latest"
+LATEST_TAG="main"
 
 DOCKER_COMPOSE_FILE_PATH="apps/hubble/docker-compose.yml"
 SCRIPT_FILE_PATH="scripts/hubble.sh"
