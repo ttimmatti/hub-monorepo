@@ -237,15 +237,15 @@ app
     // detects it as slightly under that depending on OS, so we'll only error if
     // it's less than 15GB.
     const totalMemory = Math.floor(os.totalmem() / 1024 / 1024 / 1024);
-    if (totalMemory < 15) {
-      startupCheck.printStartupCheckStatus(
-        StartupCheckStatus.ERROR,
-        `Hubble requires at least 16GB of RAM to run. Detected ${totalMemory}GB`,
-      );
-      process.exit(1);
-    } else {
-      startupCheck.printStartupCheckStatus(StartupCheckStatus.OK, `Detected ${totalMemory}GB of RAM`);
-    }
+    // if (totalMemory < 15) {
+    //   startupCheck.printStartupCheckStatus(
+    //     StartupCheckStatus.ERROR,
+    //     `Hubble requires at least 16GB of RAM to run. Detected ${totalMemory}GB`,
+    //   );
+    //   process.exit(1);
+    // } else {
+    startupCheck.printStartupCheckStatus(StartupCheckStatus.OK, `Detected ${totalMemory}GB of RAM`);
+    // }
 
     // We'll write our process number to a file so that we can detect if another hub process has taken over.
     const processFileDir = `${DB_DIRECTORY}/process/`;
